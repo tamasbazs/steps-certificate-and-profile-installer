@@ -354,7 +354,7 @@ func main() {
 		certificateURLs := splitAndTrimSpace(configs.CertificateURL, "|")
 
 		// Do not splitAndTrimSpace passphrases, since passphrase is may empty !!!
-		certificatePassphrases := strings.Split(configs.CertificatePassphrase, "|")
+		// certificatePassphrases := strings.Split(configs.CertificatePassphrase, "|")
 
 		// if len(certificateURLs) != len(certificatePassphrases) {
 		// 	failF("Certificate url count: (%d), not equals to Certificate Passphrase count: (%d)", len(certificateURLs), len(certificatePassphrases))
