@@ -356,13 +356,13 @@ func main() {
 		// Do not splitAndTrimSpace passphrases, since passphrase is may empty !!!
 		certificatePassphrases := strings.Split(configs.CertificatePassphrase, "|")
 
-		if len(certificateURLs) != len(certificatePassphrases) {
-			failF("Certificate url count: (%d), not equals to Certificate Passphrase count: (%d)", len(certificateURLs), len(certificatePassphrases))
-		}
+		// if len(certificateURLs) != len(certificatePassphrases) {
+		// 	failF("Certificate url count: (%d), not equals to Certificate Passphrase count: (%d)", len(certificateURLs), len(certificatePassphrases))
+		// }
 
 		for i := 0; i < len(certificateURLs); i++ {
 			certificateURL := certificateURLs[i]
-			certificatePassphrase := certificatePassphrases[i]
+			certificatePassphrase := ""
 
 			certificateURLPassphraseMap[certificateURL] = certificatePassphrase
 		}
